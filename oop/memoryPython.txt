@@ -1,0 +1,169 @@
+
+
+RAM stores a bunch of values and it keep track
+of all the proress we make in a session.
+It stores all this instance variables.
+
+
+RAM have stack and heap.
+
+Heap is responsible for storing all the values
+and all the objects for instance
+
+Stack is responsible for storing all the
+references to the objects in the heap.
+
+name="agath"
+When we declare this variable name what happens in the
+memory is computer allocates memory in the heap for the
+string name and stores the value "agath" in that 
+location and in the stack it creates a referece to that
+object and our variable name actually stores the 
+reference to its object location in the heap
+
+example 
+a=12
+b=12
+since a and b store the same value
+id(a) 
+and id(b) will be same
+
+from sys import getsizeof
+getsizeof will give you the size consumed
+
+type(a)
+type(b)
+will return the class type of the variables
+
+
+
+
+
+
+    Memory management in Python involves a private heap conta
+ining all Python objects and data structures. The management 
+of this private heap is ensured internally by the Python memo
+ry manager. The Python memory manager has different component
+s which deal with various dynamic storage management aspects,
+ like sharing, segmentation, preallocation or caching.
+
+
+Memory reclamation is mostly handled by reference counting. T
+hat is, the Python VM keeps an internal journal of how many r
+eferences refer to an object, and automatically garbage colle
+cts it when there are no more references referring to it. In 
+addition, there is a mechanism to break circular references (
+which reference counting can't handle) by detecting unreachab
+le "islands" of objects, somewhat in reverse of traditional G
+C algorithms that try to find all the reachable objects.
+
+
+
+Garbage Collection
+
+Garbage collection is a process in which the interpreter free
+s up the memory when not in use to make it available for othe
+r objects.
+
+Assume a case where no reference is pointing to an object in 
+memory i.e. it is not in use so, the virtual machine has a ga
+rbage collector that automatically deletes that object from t
+he heap memory
+
+
+
+
+Reference Counting
+
+Reference counting works by counting the number of times an o
+bject is referenced by other objects in the system. When refe
+rences to an object are removed, the reference count for an o
+bject is decremented. When the reference count becomes zero, 
+the object is deallocated.
+
+
+For example, Let’s suppose there are two or more variables th
+at have the same value, so, what Python virtual machine does 
+is, rather than creating another object of the same value in 
+the private heap, it actually makes the second variable point
+ to that originally existing value in the private heap. There
+fore, in the case of classes, having a number of references m
+ay occupy a large amount of space in the memory, in such a ca
+se referencing counting is highly beneficial to preserve the 
+memory to be available for other objects
+
+
+
+
+
+
+# Literal 9 is an object  
+b = 9
+a = 4
+    
+# Reference count of object 9   
+# becomes 0 and reference count 
+# of object 4 is incremented 
+# by 1 
+b = 4
+Memory Allocation in Python
+
+There are two parts of memory:
+
+    stack memory
+    heap memory 
+
+The methods/method calls and the references are stored in sta
+ck memory and all the values objects are stored in a private 
+heap.
+
+Work of Stack Memory
+
+The allocation happens on contiguous blocks of memory. We cal
+l it stack memory allocation because the allocation happens i
+n the function call stack. The size of memory to be allocated
+ is known to the compiler and whenever a function is called, 
+its variables get memory allocated on the stack.
+
+
+It is the memory that is only needed inside a particular func
+tion or method call. When a function is called, it is added o
+nto the program’s call stack. Any local memory assignments su
+ch as variable initializations inside the particular function
+s are stored temporarily on the function call stack, where it
+ is deleted once the function returns, and the call stack mov
+es on to the next task. This allocation onto a contiguous blo
+ck of memory is handled by the compiler using predefined rout
+ines, and developers do not need to worry about it.
+
+
+Example:
+
+def func(): 
+      
+    # All these variables get memory  
+    # allocated on stack  
+    a = 20
+    b = [] 
+    c = "" 
+
+Work of Heap Memory
+
+The memory is allocated during execution of instructions writ
+ten by programmers. Note that the name heap has nothing to do
+ with heap data structure. It is called heap because it is a 
+pile of memory space available to programmers to allocated an
+d de-allocate. The variables are needed outside of method or 
+function calls or are shared within multiple functions global
+ly are stored in Heap memory.
+
+
+Example:
+
+# This memory for 10 integers  
+# is allocated on heap.  
+a = [0]*10 
+
+
+
+

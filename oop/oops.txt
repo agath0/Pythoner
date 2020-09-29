@@ -1,0 +1,36 @@
+Programming paradigm
+-is an approach to organize and structure your code
+
+
+Procedural programming
+-a step by step procdre is followed sequentially to solve 
+ a problem
+
+Object Oriented programming(OOP)
+-Real world entities or concepts are modelled using objects
+
+
+OOP Characteristics
+*instances or objects
+*instantiation
+*encapsulation
+*state->variables
+*behaviour->methods
+*code reusability
+*inheritance
+*data security
+*abstraction
+*polymorphism
+
+
+NOte:In python when you define a function a function object
+     is created.When you define a class a class object is
+     is created.And the objects that are created from the 
+     classs are called as instance objects
+
+
+
+NOTE:like everything else classees are also objects in python
+
+
+

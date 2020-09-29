@@ -1,0 +1,22 @@
+
+
+https://www.edureka.co/blog/data-structures-in-python/#arrayvslist
+
+
+Built-in Data Structures
+
+
+    List
+    Dictionary
+    Tuple
+    Sets
+
+User-Defined Data Structures
+
+    Arrays vs. List
+    Stack
+    Queue
+    Trees
+    Linked Lists
+    Graphs
+    HashMaps

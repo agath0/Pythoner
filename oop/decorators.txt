@@ -1,0 +1,10 @@
+----instance method
+To make a method that needs to access instance variables
+
+----class method
+To make a method that needs to use only class variables
+
+----static method
+To make a method that needs to use neither class variables
+nor instance variables
+

@@ -1,0 +1,62 @@
+DATA HIDING
+
+Some languages implement data hiding by declaring data
+or methods in a class as private or public
+Private data and methods can be acessed only by 
+methods inside the class
+Public data and methods can be acessed  by 
+methods outside the class
+EXAMPLE:In a car you have access to steerin and breaks
+	you dont need access to all the parts of the car
+	that make your car move and stop.
+	All internal details are best left to the
+	creator of the car
+	If you have access to internalls you may unknowingly
+	do something that leads to car not working
+
+The part visible to the user(public)is the interface of 
+the class and the part which is (private) is the implementation
+
+The interface of the class comes with the guarantee that it
+will not change with time
+But implementation may be changed without any warning.
+This changes may be made to fix some bugs or to change
+some functionality and improve efficiency
+
+In python there is no such concept as private or public
+
+In python everythng inside the class in public
+
+Python doesnot enforce any restrictions on data and method
+like java and cpp do
+However there is a naming convention that specify that a 
+certain attribute is meant ot be used inside the class only.
+   leading undersore _data1
+		     _data2
+		     _method1
+the leaing underscore mean that the data or method is 
+meant to be private and should not be used outside the class.
+However you cant restrict the user fromm accesing this varible
+this variables can be accessed from outside the class to 
+just like any other variables.
+
+If you prefiz a name with __,python willdo some name mangling
+--vlaue_
+__value
+this name mangling mechanisme makes it difficult for the user
+to access the variables,but the actual purpose of this is
+to make the name specific to the  class so that there is 
+no name clash with subclasses
+
+Names that start and end with two underscors like __init__
+are used by python for its internal use
+
+class_ ,range_ etcc can be used to avoid name clashes in program
+
+
+
+NEED OF DISTINCTION BETWEEN PRIVATE AND PUBLIC WHEN
+WORKING WITH A CLASS
+--the users of a class are generally called clients and
+  the client code uses the class by instantiating it
+  that is by creating its objects
